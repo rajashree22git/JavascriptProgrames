@@ -5,31 +5,29 @@ import './style.css';
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
-function FizzBuzz(n)
+var a=[1,2,3,3,1,6]
+
+function removedup(srt)
 {
 
-  for(let i=1;i<=n;i++)
+ // debugger;
+  console.log("hi")
+
+  var char={};
+  var result=[];
+
+  for(let item of srt)
   {
-    if(i%5==0 && i%3==0)
+    if(!char[item])
     {
-console.log("fizzBuzz");
+      char[item]=1;
+      result.push(item)
     }
-   else if(i%5==0)
-    {
-console.log("Bizz");
-    }
-
-   else if(i%3==0 )
-    {
-console.log("Fiz");
-    }
-    else{
-      console.log(i);
-    }
-
   }
 
+  return result;
 }
 
-
-FizzBuzz(15);
+var hh=removedup(a)
+console.log(hh,'dd')
+//console.log(result,'result');
